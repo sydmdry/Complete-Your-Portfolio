@@ -1,0 +1,347 @@
+
+/*Overall Styling*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-image: url("Images/portback.jpg");
+}
+
+section {
+  margin: 30px 10px;
+}
+
+section h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: #993333;
+  font-size: 26px;
+  text-align: center;
+}
+
+
+/*Header and Nav*/
+
+header {
+  background-image: url("Images/headback.jpg");
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 25px; 
+  text-align: center;
+  width: 100%;
+}
+
+header h1 {
+  font-size: 40px;
+  color:#f9ecec;
+  margin: 0;
+  padding-top: 17px;
+}
+
+header h2 {
+  font-size: 24px;
+  color: #993333;
+  margin: 3px;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+}
+
+header nav ul {
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+}
+
+header nav ul li a {
+  font-family: 'BenchNine', sans-serif;
+  font-size: 22px;
+  color: #f9ecec;
+  text-decoration: none;
+  margin: 0 10px 0 0;
+}
+
+header nav ul li:last-child a{
+  margin-right: 0;
+}
+
+
+/*Intro Section*/
+
+.intro img,
+.project img {
+  border-radius: 50%;
+}
+
+section h3 {
+  color: #993333;
+  font-size: 24px;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  align-items: flex-start;
+}
+
+.wrap p {
+  color: #f9ecec;
+  font-size: 22px;
+  font-family: 'BenchNine', sans-serif;
+  margin: 0;
+  display: block;
+}
+
+
+/*Mobile First Flex*/
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  }
+
+.item {
+  flex: 1;
+  align-self: center;
+}
+
+
+/*About Me Section*/
+
+section ul {
+  margin: 0;
+}
+
+section ul li {
+  color:#f9ecec;
+  font-family: 'BenchNine', sans-serif;
+  font-size: 18px;
+  list-style-type: circle;
+}
+
+
+/*Project Section*/
+
+.project h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  color: #f9ecec;
+}
+
+.project {
+  font-family: 'BenchNine';
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.project a {
+  color:#993333;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+
+/*Contact and Form Section*/
+
+
+.contact a {
+  text-decoration: none;
+  color:#f9ecec;
+  font-family: 'BenchNine', sans-serif;
+  font-size: 25px;
+}
+
+form label,
+form textarea,
+form input[type="text"] {
+  width: 100%;
+}
+
+fieldset {
+  padding: 10px 15px;
+  margin: 10px 0 20px 0;
+  border: 2px solid #993333;
+  border-radius: 6px;
+}
+
+form label {
+  display: block;
+  color: #f9ecec;
+  font-size: 20px;
+}
+
+form textarea {
+  height: 5rem;
+  color: black;
+}
+
+button[type="submit"]{
+  margin: 5px 0;
+  border: 0;
+  border-radius: 6px;
+  background-color: #993333;
+  color: #f9ecec;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+/*Footer*/
+
+footer {
+  margin-top: 20px;
+  color: #993333;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+
+/*Desktop Time!*/
+
+@media all and (min-width:700px) {
+
+  /*Header*/
+
+  header {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+  header .head {
+    margin: 10px 0;
+    padding-top: 0;
+  }
+  header h1{
+    font-size: 47px;
+  }
+  header h2,
+  section h2{
+    font-size: 33px;
+  }
+  header nav{
+    margin-top: 33px;
+  }
+  header nav ul li a{
+    margin-right: 13px;
+    font-size: 27px;
+  }
+  header nav ul li a:hover{
+    color: #993333;
+  }
+
+  /*Desktop Wrap*/
+
+  .wrap {
+    display: flex;
+    flex-direction: row;
+  }
+  .item {
+    flex: 1;
+  }
+  section {
+    padding-bottom: 115px;
+  }
+  section h2{
+    padding: 33px 0;
+  }
+  
+  /*Intro*/
+
+  .intro img {
+    margin-right:0;
+    padding-left: 30px;
+  }
+  .intro {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+  }
+  .intro .item {
+    padding: 0;
+  }
+  .intro .hello {
+    margin-left: 0;
+  }
+  .intro h3 {
+    font-size: 35px;
+    margin-bottom: 19px;
+  }
+  .intro p {
+    font-size: 27px;
+  }
+
+  /*About*/
+
+  #about p{
+    padding: 5px 17px;
+    font-size: 25px;
+  }
+  #about ul li{
+    font-size: 25px;
+    padding: 5px 0;
+  }
+
+  /*Project*/
+
+  #portfolio {
+    padding: 0 13px;
+  }
+  #portfolio .wrap{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 100%
+  }
+  #portfolio .project {
+    flex: 50%;
+    padding: 19px 0;
+  }
+  #portfolio .project h4{
+    font-size: 25px;
+  }
+  .project p,
+  .project a {
+    font-size: 23px;
+    padding: 9px 0;
+  }
+  .project a:hover {
+    color: #f9ecec;
+  }
+
+  /*Contact*/
+ #contact .wrap{
+   display: flex;
+   justify-content: center;
+   padding: 0 25px;
+ }
+ #contact .item{
+   flex: 1;
+   padding-left: 19px;
+ }
+ #contact .double {
+   flex: 2;
+ }
+ #contact .item a{
+   font-size: 29px;
+ }
+ #contact .item p{
+   font-size: 27px;
+   color: #993333;
+ }
+ #contact a:hover {
+   color:#993333;
+ }
+ }
+ form label{
+   font-size: 23px;
+   margin: 7px 0;
+ }
+ button[type="submit"]{
+   padding: 7px;
+   font-size: 17px;
+ }
+}
